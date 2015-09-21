@@ -87,8 +87,8 @@ public class RelaxTime
             String todayStart = dateFormat.format(date) + "\r\n";
             String startTime = String.format("%19s", System.currentTimeMillis());
             writer.append("Game session started: " + todayStart + "   Password: " + correctPass + " " + startTime +"\r\n");
-        }catch (IOException e) {
-            System.out.println("IOException: " + e);
+        } catch (IOException e) {
+            e.printStackTrace;
         }
     }
 
@@ -120,11 +120,10 @@ public class RelaxTime
             length -= 1;
             randomAccessFile.seek(length);
             b = randomAccessFile.readByte();
-        }
-        while (b != 10);
-        randomAccessFile.setLength(length + 1);
-        }catch (IOException e) {
-        System.out.println("Smth wrong in method -> 'deleteLastLine'");
+        } while (b != 10);
+            randomAccessFile.setLength(length + 1);
+        } catch (IOException e) {
+            System.out.println("Smth wrong in method -> 'deleteLastLine'");
         }
     }
 
@@ -134,9 +133,9 @@ public class RelaxTime
         try (RandomAccessFile randomAccessFile = new RandomAccessFile(fileName, "rw"))
         {
             long fileSize = randomAccessFile.length();
-            
             randomAccessFile.seek(fileSize - 20);
             StringBuilder stringBuilder = new StringBuilder();
+            
             int oneByte;
             while ((oneByte = randomAccessFile.read()) != -1)
             {
