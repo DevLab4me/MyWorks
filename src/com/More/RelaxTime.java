@@ -150,13 +150,13 @@ public class RelaxTime
                 long timeSpent = endTime - logTime;
 
                 long second = (timeSpent / 1000) % 60;
-				long minute = (timeSpent / (1000 * 60)) % 60;
-				long hour = (timeSpent / (1000 * 60 * 60)) % 24-17;
+		long minute = (timeSpent / (1000 * 60)) % 60;
+		long hour = (timeSpent / (1000 * 60 * 60)) % 24-17;
 				
-				if (hour<1)
-					resTime = String.format("%02d mins : %02d secs", minute, second);
+		if (hour<1)
+			resTime = String.format("%02d mins : %02d secs", minute, second);
                 else
-                    resTime = String.format("%02dh : %02dmins", hour, minute);
+                	resTime = String.format("%02dh : %02dmins", hour, minute);
             }
             catch (NumberFormatException e)
             {
