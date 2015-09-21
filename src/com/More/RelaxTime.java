@@ -46,7 +46,7 @@ public class RelaxTime
         String dateLine = date.replaceAll("[\\p{P}]", " ");
         String [] dateStr = dateLine.split(" ");
         Collections.addAll(dateArray, dateStr);
-        return dateArray.contains("Mon") || dateArray.contains("Sun");
+        return dateArray.contains("Wed") || dateArray.contains("Sun");
     }
 
     private static byte [] toBytes(String password)
