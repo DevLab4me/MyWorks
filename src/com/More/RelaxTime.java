@@ -142,7 +142,7 @@ public class RelaxTime
                 stringBuilder.append((char) oneByte);
             }
             String timeFromFile = stringBuilder.toString().trim();
-            System.out.println(timeFromFile);
+            
             try
             {
                 long logTime = Long.parseLong(timeFromFile);
@@ -150,9 +150,9 @@ public class RelaxTime
 
                 long second = (timeSpent / 1000) % 60;
 		long minute = (timeSpent / (1000 * 60)) % 60;
-		long hour = (timeSpent / (1000 * 60 * 60)) % 24-17;
+		long hour = (timeSpent / (1000 * 60 * 60)) % 24;
 				
-		if (hour<1)
+		if (hour < 1)
 			resTime = String.format("%02d mins : %02d secs", minute, second);
                 else
                 	resTime = String.format("%02dh : %02dmins", hour, minute);
@@ -161,7 +161,7 @@ public class RelaxTime
             {
                 System.out.println("Couldn't parse String:" + timeFromFile + ":NumberFormatException");
             }
-        }catch (IOException e)
+        } catch (IOException e)
         {
             System.out.println("Smth wrong in method -> 'countTimeSpentForPlaying'");
         }
