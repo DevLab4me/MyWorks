@@ -6,7 +6,8 @@ CashMachine - cashmachine simulator with the following options:
 4) Exit: there will be shown a confirmation question before the actual session termination; 
 5) Customer has an option of terminating the CashMachine working session at anytime by typing the word "exit".
 
-RelaxTime - program that generates a crypted password(that was periously set up) for a game session access (only on allowed days):
-1) works through the command line with two args (-p - play/-e - end; uncrypted password);
-2) logs password for the game (after ending game session (-e) line with password is deleted);
-3) logs date of a game session start/end and the time spent on playing;
+RelaxTime - program that generates a crypted password(that was periously set up) for a game session access. 
+Works through the command line. Options:
+1) Start Session - generates a crypted password (from a normal password) that is set up for an account access (only on allowed days) and logs into file - time of the game session start;
+2) End Session- logs an end time of a game session and counts a total amount of time spent on current session (command is not executing in case if the session wasn't initialized by "1" option first);
+3) Exit - exiting the application.
