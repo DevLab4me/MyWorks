@@ -1,4 +1,4 @@
-package com.javarush.test.More.MyWorks.RelaxTime;
+package MyWorks.src.RelaxTime;
 
 import java.io.BufferedReader;
 import java.io.IOException;
